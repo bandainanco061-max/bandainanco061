@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Web del Colegio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Pantalla de bienvenida */
+
+#bienvenida{
+    width:100%;
+    height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,80,0,0.45),rgba(0,80,0,0.45)),
+    url("C:\Users\PC10\Pictures\image NOSE.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+}
+
+#bienvenida h1{
+    font-size:55px;
+    text-shadow:3px 3px 8px black;
+}
+
+#bienvenida p{
+    margin:20px;
+    font-size:22px;
+    text-shadow:2px 2px 6px black;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    background:white;
+    color:#2E7D32;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#d9ffd9;
+    transform:scale(1.05);
+}
+
+/* Página principal */
+
+#principal{
+    display:none;
+}
+
+header{
+    background:#2E7D32;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#1B5E20;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:15px 25px;
+}
+
+nav ul li:hover{
+    background:#388E3C;
+}
+
+nav ul li ul{
+    display:none;
+    position:absolute;
+    background:#388E3C;
+    min-width:180px;
+}
+
+nav ul li:hover ul{
+    display:block;
+}
+
+nav ul li ul li{
+    width:100%;
+}
+
+section{
+    display:none;
+    padding:30px;
+}
+
+.activo{
+    display:block;
+}
+
+footer{
+    text-align:center;
+    background:#1B5E20;
+    color:white;
+    padding:15px;
+    margin-top:20px;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #999;
+    border-radius:5px;
+}
+
+.enviar{
+    background:#2E7D32;
+    color:white;
+}
+
+.enviar:hover{
+    background:#1B5E20;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Bienvenida -->
+
+<div id="bienvenida">
+
+<img src="C:\Users\PC10\Pictures\logo.jpg" alt="Colegio" class="imagen-bienvenida">    
+
+<h1>¡Bienvenido Al Mejor Colegio Que Existe!</h1>
+
+<p>Sistema Web del Colegio La Primera "Fe y Alegria"</p>
+
+<button onclick="entrar()">Ingresar</button>
+
+</div>
+
+<!-- Página principal -->
+
+<div id="principal">
+
+<header>
+
+<h1>Unidad Educativa LA PRIMERA "FE Y ALEGRIA"</h1>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#" onclick="mostrar('inicio')">Inicio</a></li>
+
+<li>
+
+<a href="#">Colegio La Primera▼</a>
+
+<ul>
+
+<li><a href="#" onclick="mostrar('mision')">Misión</a></li>
+
+<li><a href="#" onclick="mostrar('vision')">Visión</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="#" onclick="mostrar('actividades')">Actividades</a></li>
+
+<li><a href="#" onclick="mostrar('panel')">Panel Informativo</a></li>
+
+<li><a href="#" onclick="mostrar('formulario')">Consulta a Profesores</a></li>
+
+</ul>
+
+</nav>
+
+<section id="inicio" class="activo">
+
+    <h2> Bienvenidos a la Unidad Educativa</h2>
+    
+    <p align="justify">
+    La Unidad Educativa fue fundada con el propósito de brindar una educación
+    integral basada en valores, disciplina y excelencia académica. Desde sus
+    primeros años, la institución ha trabajado para formar estudiantes capaces
+    de enfrentar los retos del mundo moderno, promoviendo el respeto, la
+    solidaridad y la responsabilidad como pilares fundamentales de la formación
+    educativa.
+    </p>
+    
+    <br>
+    
+    <h2> Nuestra Historia</h2>
+    
+    <p align="justify">
+    A lo largo de los años, nuestro colegio ha crecido tanto en infraestructura
+    como en calidad educativa. Gracias al esfuerzo conjunto de directivos,
+    docentes, estudiantes y padres de familia, la institución se ha convertido
+    en un referente de educación en la comunidad, destacándose por su compromiso
+    con la formación académica, cultural, deportiva y tecnológica.
+    </p>
+    
+    <br>
+    
+    <h2> Logros Alcanzados</h2>
+    
+    <ul>
+    <li> -Primer lugar en Olimpiadas Científicas.</li>
+    <li> -Campeón en torneos deportivos intercolegiales.</li>
+    <li> -Implementación de laboratorios de computación.</li>
+    <li> -Reconocimiento por excelencia académica.</li>
+    <li> -Participación en proyectos de medio ambiente.</li>
+    <li> -Destacada participación en festivales culturales.</li>
+    <li> -Desarrollo de proyectos tecnológicos y robótica.</li>
+    </ul>
+    
+    <br>
+    
+    <h2> Metas que Deseamos Alcanzar</h2>
+    
+    <ul>
+    <li> -Ser una de las mejores instituciones educativas del país.</li>
+    <li> -Modernizar todas las aulas con tecnología.</li>
+    <li> -Fortalecer la enseñanza del inglés y la informática.</li>
+    <li> -Incrementar la participación en competencias nacionales.</li>
+    <li> -Desarrollar proyectos de innovación científica.</li>
+    <li> -Continuar formando estudiantes responsables y líderes.</li>
+    </ul>
+    
+    <br>
+    
+    <h2> Galería de Imágenes</h2>
+    
+    <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    
+    <img src="C:\Users\PC10\Pictures\cole1.jpg" width="300" height="200">
+    
+    <img src="C:\Users\PC10\Pictures\cole2.jpg" width="300" height="200">
+    
+    <img src="C:\Users\PC10\Pictures\cole3.jpg" width="300" height="200">
+    
+    </div>
+    
+    <br><br>
+    
+    <h2> Video Institucional</h2>
+    
+    <center>
+    
+    <video width="700" controls>
+    
+    <source src="C:\Users\PC10\Desktop\tiktok_nwm_7647681701748985095.mp4" type="video/mp4">
+    
+    Tu navegador no soporta videos.
+    
+    </video>
+    
+    </center>
+    
+    <br>
+    
+    <h2> Nuestro Compromiso</h2>
+    
+    <p align="justify">
+    Seguiremos trabajando para ofrecer una educación de calidad, promoviendo el
+    desarrollo de competencias académicas, deportivas y humanas que permitan a
+    nuestros estudiantes convertirse en ciudadanos responsables, emprendedores y
+    comprometidos con el progreso de nuestra sociedad.
+    </p>
+    
+    </section>
+
+    <section id="mision">
+
+        <h2> Misión Institucional</h2>
+        
+        <p align="justify">
+        Nuestra misión es brindar una educación integral de excelencia,
+        formando estudiantes con sólidos conocimientos académicos, principios
+        éticos y valores humanos, capaces de desenvolverse responsablemente en
+        la sociedad y contribuir al desarrollo de su comunidad.
+        </p>
+        
+        <h3>Objetivos Institucionales</h3>
+        
+        <ul>
+        <li> -Formar estudiantes con excelencia académica.</li>
+        <li> -Fomentar el respeto, la honestidad y la responsabilidad.</li>
+        <li> -Desarrollar habilidades científicas, tecnológicas y deportivas.</li>
+        <li -Incentivar la creatividad y el pensamiento crítico.</li>
+        <li> - Promover el trabajo en equipo.</li>
+        <li> -Fortalecer la convivencia escolar.</li>
+        <li> -Preparar a los estudiantes para la universidad.</li>
+        <li> -Impulsar proyectos ambientales.</li>
+        <li> -Integrar a los padres de familia en la educación.</li>
+        <li> -Utilizar nuevas tecnologías en el aprendizaje.</li>
+        </ul>
+        
+        <h3>Nuestro compromiso</h3>
+        
+        <p align="justify">
+        La institución trabaja diariamente para ofrecer una educación de calidad,
+        garantizando un ambiente seguro, inclusivo y participativo donde cada
+        estudiante pueda desarrollar todas sus capacidades académicas, sociales
+        y personales.
+        </p>
+        
+        <h3> Nuestra Misión en Imágenes</h3>
+        
+        <center>
+        
+        <img src="C:\Users\PC10\Pictures\mision1.jpg" width="350" height="220">
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <img src="C:\Users\PC10\Pictures\mision2.jpg" width="350" height="220">
+        
+        </center>
+        
+        </section>
+
+        <section id="vision">
+
+            <h2> Visión Institucional</h2>
+            
+            <p align="justify">
+            Nuestra visión es consolidarnos como una institución educativa líder,
+            reconocida por la excelencia académica, la innovación tecnológica,
+            la formación en valores y el compromiso con el desarrollo de la sociedad.
+            </p>
+            
+            <h3>Valores que nos representan</h3>
+            
+            <ul>
+            <li> -Respeto.</li>
+            <li> -Honestidad.</li>
+            <li> -Responsabilidad.</li>
+            <li> -Disciplina.</li>
+            <li> -Solidaridad.</li>
+            <li> -Excelencia.</li>
+            <li> -Respeto al medio ambiente.</li>
+            <li> -Creatividad.</li>
+            <li> -Perseverancia.</li>
+            <li> -Inclusión.</li>
+            </ul>
+            
+            <h3>Lo que queremos alcanzar</h3>
+            
+            <ul>
+            <li> -Ser una institución líder a nivel nacional.</li>
+            <li> -Modernizar todas las aulas.</li>
+            <li> -Participar en competencias internacionales.</li>
+            <li> -Implementar laboratorios de robótica.</li>
+            <li> -Fortalecer la investigación científica.</li>
+            <li> -Incrementar el ingreso de estudiantes a universidades.</li>
+            <li> -Obtener reconocimientos nacionales e internacionales.</li>
+            </ul>
+            
+            <h3>Compromiso Institucional</h3>
+            
+            <p align="justify">
+            Trabajamos constantemente para mejorar nuestros procesos educativos,
+            fortalecer la formación integral de nuestros estudiantes y ofrecer
+            espacios donde puedan desarrollar sus talentos académicos, deportivos,
+            culturales y tecnológicos.
+            </p>
+            
+            <h3> Nuestra Visión en Imágenes</h3>
+            
+            <center>
+            
+            <img src="C:\Users\PC10\Pictures\chat2.png" width="350" height="220">
+            
+            &nbsp;&nbsp;&nbsp;
+            
+            <img src="C:\Users\PC10\Pictures\chot 12.png" width="350" height="220">
+            
+            </center>
+            
+            </section>
+
+<section id="actividades">
+
+    <h2> Actividades Institucionales</h2>
+    
+    <h3> Horario de Invierno</h3>
+    
+    <p>
+    Se informa a toda la comunidad educativa que se encuentra vigente el
+    <strong>Horario de Invierno</strong>. El ingreso a clases será con una
+    tolerancia de 30 minutos debido a las bajas temperaturas.
+    Se recomienda a los estudiantes asistir con el uniforme completo y ropa de abrigo.
+    </p>
+    
+    <br>
+    
+    <h3> Entrevistas con Padres de Familia</h3>
+    
+    <p>
+    La Dirección informa que durante las próximas semanas se realizarán
+    <strong>entrevistas personalizadas</strong> entre los padres de familia y los docentes
+    para informar sobre el rendimiento académico, asistencia y comportamiento de los estudiantes.
+    </p>
+    
+    <ul>
+    <li> -Fecha de inicio: 10 de julio.</li>
+    <li> -Horario: 08:00 a.m. - 12:00 p.m.</li>
+    <li> -Lugar: Aulas correspondientes.</li>
+    <li> -Se solicita puntualidad y portar la libreta del estudiante.</li>
+    </ul>
+    
+    <br>
+    
+    <h3> Próximas Actividades</h3>
+    
+    <ul>
+    <li> Desfile de Teas.</li>
+    <li> Campeonato Deportivo De Voley.</li>
+    <li> Nuevos Alumnos.</li>
+    <li> Taller de Programación y Robótica.</li>
+    <li> Campaña de Reforestación.</li>
+    <li> Concurso de Lectura y Oratoria.</li>
+    <li> Exposición de Arte y Pintura.</li>
+    <li> Acto Cívico Mensual.</li>
+    </ul>
+    
+    <br>
+    
+    <h3> Recomendaciones</h3>
+    
+    <p>
+    Se recuerda a todos los estudiantes cumplir con el uniforme oficial,
+    mantener una asistencia regular y estar atentos a los comunicados publicados
+    en el Panel Informativo de la institución.
+    </p>
+    
+    </section>
+
+    <section id="panel">
+
+        <h2> Panel Informativo</h2>
+        
+        <p>
+        Bienvenidos al Panel Informativo de la Unidad Educativa. Aquí encontrarás los
+        avisos más importantes, comunicados oficiales y actividades programadas para
+        toda la comunidad educativa.
+        </p>
+        
+        <hr>
+        
+        <h3> Comunicados</h3>
+        
+        <ul>
+            <li> Continúa vigente el <strong>Horario de Invierno</strong>. Se recomienda asistir con ropa abrigada y el uniforme completo.</li>
+        
+            <li> Las <strong>entrevistas con padres de familia</strong> se realizarán del 10 al 15 de julio en los horarios establecidos por cada curso.</li>
+        
+            <li> Los estudiantes deberán entregar todos los trabajos pendientes antes de la semana de evaluaciones.</li>
+        
+            <li> La biblioteca del colegio atenderá de lunes a viernes de 08:00 a 16:00.</li>
+        
+            <li> Se recuerda a los estudiantes revisar constantemente la plataforma educativa para conocer nuevas tareas y avisos.</li>
+        </ul>
+        
+        <hr>
+        
+        <h3> Próximos Eventos</h3>
+        
+        <ul>
+            <li> Campeonato Deportivo Intercursos.</li>
+        
+            <li> Feria Científica Institucional.</li>
+        
+            <li> Festival Cultural y Artístico.</li>
+        
+            <li> Jornada de limpieza y cuidado del medio ambiente.</li>
+        
+            <li> Acto de reconocimiento a los mejores estudiantes del trimestre.</li>
+        </ul>
+        
+        <hr>
+        
+        <h3>⚠ Avisos Importantes</h3>
+        
+        <ul>
+            <li> Mantener el uso correcto del uniforme escolar.</li>
+        
+            <li> Llegar puntualmente al inicio de clases.</li>
+        
+            <li> Cuidar el mobiliario y las instalaciones del colegio.</li>
+        
+            <li> Mantener una buena convivencia entre compañeros y docentes.</li>
+        
+            <li> Presentar justificativos en caso de inasistencia.</li>
+        
+            <li> Revisar diariamente los comunicados emitidos por Dirección.</li>
+        </ul>
+        
+        <hr>
+        
+        <h3> Información de Contacto</h3>
+        
+        <p>
+        Dirección: Av. Principal N.º 123<br><br>
+        
+         Teléfono: (000) 123-4567<br><br>
+        
+         Correo: colegio@educacion.edu<br><br>
+        
+         Atención Administrativa:<br>
+        Lunes a Viernes<br>
+        08:00 a.m. - 04:00 p.m.
+        </p>
+        
+        </section>
+
+        <section id="formulario">
+
+            <h2> Formulario de Consulta a Profesores</h2>
+            
+            <p>
+            Complete el siguiente formulario para enviar una consulta al docente correspondiente.
+            </p>
+            
+            <form>
+            
+            <label><strong>Nombre Completo:</strong></label>
+            <input type="text" placeholder="Ingrese su nombre completo" required>
+            
+            <label><strong>Correo Electrónico:</strong></label>
+            <input type="email" placeholder="Ingrese su correo electrónico" required>
+            
+            <label><strong>Nivel Educativo:</strong></label>
+            
+            <select required>
+                <option value="">Seleccione un nivel</option>
+                <option>Inicial</option>
+                <option>Primaria</option>
+                <option>Secundaria</option>
+            </select>
+            
+            <br><br>
+            
+            <label><strong>Curso:</strong></label>
+            
+            <select required>
+                <option value="">Seleccione un curso</option>
+            
+                <optgroup label="Inicial">
+                    <option>1° Inicial</option>
+                    <option>2° Inicial</option>
+                </optgroup>
+            
+                <optgroup label="Primaria">
+                    <option>1° Primaria</option>
+                    <option>2° Primaria</option>
+                    <option>3° Primaria</option>
+                    <option>4° Primaria</option>
+                    <option>5° Primaria</option>
+                    <option>6° Primaria</option>
+                </optgroup>
+            
+                <optgroup label="Secundaria">
+                    <option>1° Secundaria</option>
+                    <option>2° Secundaria</option>
+                    <option>3° Secundaria</option>
+                    <option>4° Secundaria</option>
+                    <option>5° Secundaria</option>
+                    <option>6° Secundaria</option>
+                </optgroup>
+            
+            </select>
+            
+            <br><br>
+            
+            <label><strong>Materia:</strong></label>
+            
+            <select required>
+                <option>Seleccione una materia</option>
+                <option>Matemática</option>
+                <option>Lenguaje</option>
+                <option>Literatura</option>
+                <option>Inglés</option>
+                <option>Historia</option>
+                <option>Geografía</option>
+                <option>Biología</option>
+                <option>Física</option>
+                <option>Química</option>
+                <option>Computación</option>
+                <option>Educación Física</option>
+                <option>Artes Plásticas</option>
+                <option>Música</option>
+            </select>
+            
+            <br><br>
+            
+            <label><strong>Profesor:</strong></label>
+            <input type="text" placeholder="Nombre del profesor">
+            
+            <label><strong>Tipo de Consulta:</strong></label>
+            
+            <select>
+                <option>Seleccione una opción</option>
+                <option>Calificaciones</option>
+                <option>Tareas</option>
+                <option>Exámenes</option>
+                <option>Asistencia</option>
+                <option>Comportamiento</option>
+                <option>Permisos</option>
+                <option>Reunión con el profesor</option>
+                <option>Otro</option>
+            </select>
+            
+            <br><br>
+            
+            <label><strong>Turno:</strong></label><br>
+            
+            <input type="radio" name="turno"> Mañana
+            
+            <input type="radio" name="turno"> Tarde
+            
+            <br><br>
+            
+            <label><strong>Fecha:</strong></label>
+            <input type="date">
+            
+            <label><strong>Escriba su consulta:</strong></label>
+            
+            <textarea rows="6" placeholder="Escriba aquí su consulta..."></textarea>
+            
+            <label><strong>Adjuntar archivo (Opcional):</strong></label>
+            <input type="file">
+            
+            <br><br>
+            
+            <input class="enviar" type="submit" value="📨 Enviar Consulta">
+            
+            <input type="reset" value="🗑 Limpiar Formulario">
+            
+            </form>
+            
+            </section>
+            
+<footer>
+
+© 2026 - Página Web del Colegio
+
+</footer>
+
+</div>
+
+<script>
+
+function entrar(){
+
+document.getElementById("bienvenida").style.display="none";
+document.getElementById("principal").style.display="block";
+
+}
+
+function mostrar(id){
+
+let secciones=document.querySelectorAll("section");
+
+secciones.forEach(function(sec){
+sec.classList.remove("activo");
+});
+
+document.getElementById(id).classList.add("activo");
+
+}
+
+</script>
+
+</body>
+</html>
